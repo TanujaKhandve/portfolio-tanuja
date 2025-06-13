@@ -12,7 +12,7 @@ export default function Resume() {
 
       <div className="space-x-4 mt-4">
         <a
-          href="https://drive.google.com/your-resume-link/view"
+          href="https://drive.google.com/file/d/17O0kTsT05-_xt6aaD7Qk70uNgOij7QuK/view?usp=drivesdk"
           target="_blank"
           rel="noreferrer"
           className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-md shadow-md transition duration-300"
@@ -21,7 +21,7 @@ export default function Resume() {
         </a>
 
         <a
-          href="https://drive.google.com/your-resume-link/view?usp=sharing"
+          href="https://drive.google.com/file/d/17O0kTsT05-_xt6aaD7Qk70uNgOij7QuK/view?usp=drivesdk"
           target="_blank"
           rel="noreferrer"
           download
