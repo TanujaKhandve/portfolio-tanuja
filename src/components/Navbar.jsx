@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="bg-black text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-50">
   <h1 className="text-xl font-bold tracking-wide">
     
-    Tanuja Khandve Portfolio 
+    Tanuja Khandve  
   </h1>
   <div className="space-x-6 text-sm font-medium">
     <a href="#projects" className="hover:text-indigo-300">Projects</a>
