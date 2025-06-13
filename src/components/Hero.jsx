@@ -3,7 +3,7 @@ import React from 'react';
 export default function Hero() {
     return (
         <section className="h-[90vh] flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-white to-indigo-50" id="home">
-            <h1 className="text-4xl font-bold mb-4 text-indigo-800"> Hi, I'm Tanuja 👩‍💻 Full Stack MERN Developer</h1>
+            <h1 className="text-4xl font-bold mb-4 text-indigo-800"> Hi, I'm Tanuja 👩‍💻 Full Stack Developer</h1>
             <p className="text-lg text-gray-700 max-w-xl">
                 A highly motivated and self-driven Full Stack Developer with hands-on experience in building responsive, scalable web applications using the MERN stack. I've successfully developed real-world projects like a Food Ordering App (GoFood), Online Examination Portal, and a ToDo Manager — all integrating REST APIs, authentication, and CRUD operations. I’m passionate about solving problems, writing clean code, and continuously improving.
             </p>
