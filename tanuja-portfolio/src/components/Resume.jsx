@@ -1,34 +1,150 @@
 import React from 'react';
+import { FaDownload, FaEye, FaGraduationCap, FaCode, FaCloud, FaServer } from 'react-icons/fa';
 
 export default function Resume() {
+  const highlights = [
+    {
+      icon: <FaGraduationCap />,
+      title: "Education",
+      desc: "MSc Computer Applications",
+      color: "cyan"
+    },
+    {
+      icon: <FaCode />,
+      title: "Development",
+      desc: "MERN Stack Expert",
+      color: "purple"
+    },
+    {
+      icon: <FaCloud />,
+      title: "Cloud Learning",
+      desc: "AWS & Azure",
+      color: "blue"
+    },
+    {
+      icon: <FaServer />,
+      title: "Backend",
+      desc: "Node.js & APIs",
+      color: "pink"
+    }
+  ];
+
+  const colorClasses = {
+    cyan: {
+      gradient: "from-cyan-500 to-blue-500",
+      bg: "bg-cyan-500/10",
+      border: "border-cyan-500/20",
+      text: "text-cyan-400"
+    },
+    purple: {
+      gradient: "from-purple-500 to-pink-500",
+      bg: "bg-purple-500/10",
+      border: "border-purple-500/20",
+      text: "text-purple-400"
+    },
+    blue: {
+      gradient: "from-blue-500 to-cyan-500",
+      bg: "bg-blue-500/10",
+      border: "border-blue-500/20",
+      text: "text-blue-400"
+    },
+    pink: {
+      gradient: "from-pink-500 to-red-500",
+      bg: "bg-pink-500/10",
+      border: "border-pink-500/20",
+      text: "text-pink-400"
+    }
+  };
+
   return (
-    <section id="resume" className="py-16 px-6 bg-[#f3f4f6] text-center">
-      <h2 className="text-3xl font-bold text-indigo-600 mb-4 tracking-wide">Resume</h2>
+    <section id="resume" className="py-24 px-6 bg-slate-950">
+      <div className="max-w-5xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Resume
+            </span>
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            Explore my professional journey from development to deployment, connecting code with cloud infrastructure
+          </p>
+        </div>
 
-      <p className="text-gray-700 text-lg max-w-xl mx-auto mb-6">
-        Want to know more about my experience and education?  
-        Download or view my latest resume to explore how I’ve worked on real-world MERN stack projects, managed APIs, and built web apps from scratch.
-      </p>
+        {/* Highlights Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {highlights.map((item, idx) => {
+            const colors = colorClasses[item.color];
+            return (
+              <div 
+                key={idx} 
+                className={`${colors.bg} border ${colors.border} rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300`}
+              >
+                <div className={`${colors.text} text-4xl mb-3 flex justify-center`}>
+                  {item.icon}
+                </div>
+                <h3 className="text-white font-semibold mb-1 text-sm">
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
 
-      <div className="space-x-4 mt-4">
-        <a
-          href="https://drive.google.com/your-resume-link/view"
-          target="_blank"
-          rel="noreferrer"
-          className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-md shadow-md transition duration-300"
-        >
-          📄 View Resume
-        </a>
+        {/* Main Card */}
+        <div className="bg-slate-900 rounded-2xl p-8 md:p-12 border border-slate-800">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-3">
+              Tanuja Khandve
+            </h3>
+            <p className="text-gray-400 mb-6">
+              Full Stack Developer specializing in MERN stack with a passion for cloud infrastructure and scalable solutions
+            </p>
+            
+            {/* Key Points */}
+            <div className="grid md:grid-cols-3 gap-4 text-left">
+              <div className="bg-slate-950 rounded-lg p-4 border border-slate-800">
+                <h4 className="text-cyan-400 font-semibold mb-2 text-sm">Frontend</h4>
+                <p className="text-gray-500 text-xs">React.js, Tailwind CSS, Modern UI/UX</p>
+              </div>
+              <div className="bg-slate-950 rounded-lg p-4 border border-slate-800">
+                <h4 className="text-purple-400 font-semibold mb-2 text-sm">Backend</h4>
+                <p className="text-gray-500 text-xs">Node.js, Express, REST APIs, JWT</p>
+              </div>
+              <div className="bg-slate-950 rounded-lg p-4 border border-slate-800">
+                <h4 className="text-blue-400 font-semibold mb-2 text-sm">Database</h4>
+                <p className="text-gray-500 text-xs">MongoDB, MySQL, Data Modeling</p>
+              </div>
+            </div>
+          </div>
 
-        <a
-          href="https://drive.google.com/your-resume-link/view?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
-          download
-          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md shadow-md transition duration-300"
-        >
-          ⬇️ Download PDF
-        </a>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://drive.google.com/file/d/17O0kTsT05-_xt6aaD7Qk70uNgOij7QuK/view?usp=drivesdk"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
+            >
+              <FaEye />
+              View Resume
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/17O0kTsT05-_xt6aaD7Qk70uNgOij7QuK/view?usp=drivesdk"
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="flex items-center gap-2 px-8 py-3 bg-slate-800 rounded-lg font-semibold text-white border border-slate-700 hover:border-cyan-500/50 transition-all"
+            >
+              <FaDownload />
+              Download PDF
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
